@@ -12,8 +12,8 @@ if (isset($_POST['submit'])) {
     }
 
     // Hash the password for security
-    $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-
+    $hashed_password = password_hash($password, PASSWORD_BCRYPT); 
+    
     // Database connection
     $servername = "localhost";
     $db_username = "root";
