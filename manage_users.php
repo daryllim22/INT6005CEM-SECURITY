@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-Ensure only admins can access this page
+//Ensure only admins can access this page
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
     header("Location: login.php?error=Access denied.");
     exit();
