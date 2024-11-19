@@ -49,6 +49,9 @@ if (isset($_SESSION['role'])) {
 
 <?php
 if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
     // Database connection
     $servername = "localhost";
     $db_username = "root";
@@ -60,9 +63,6 @@ if (isset($_POST['login'])) {
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
     // Fetch user details
     $sql = "SELECT * FROM user WHERE username = ?";
